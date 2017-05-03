@@ -7,7 +7,7 @@ import {Keg} from './keg.model';
   template: `
   <div class="col m2">
   <h1> Price</h1>
-  <md-select placeholder="State" [(ngModel)]="selectedOption" (change)="filterOnClicked(selectedOption)">
+  <md-select placeholder="State" [(ngModel)]="selectedOption" (change)="filterOnClicked('price', selectedOption)">
     <md-option *ngFor = "let keg of childKegList|uniqueness:'price'" [value]="keg"> {{keg}}</md-option>
   </md-select>
   <h1> Pour Size</h1>
@@ -24,7 +24,9 @@ export class FilterKegsComponent {
 
   selectedOption: string;
 
-  filterOnClicked(selectedOption){
-    this.filterSender.emit(selectedOption);
+  filterOnClicked(value, selectedOption){
+    var filterParams = [value, selectedOption];
+    console.log(filterParams);
+    this.filterSender.emit(filterParams);
   }
 }
