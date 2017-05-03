@@ -4,6 +4,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import {AllKegsComponent} from './allkegs.component';
 import {FilterKegsComponent} from './filter-kegs.component';
+import { EvenKegsPipe } from './evenKegs.pipe';
+import { OddKegsPipe } from './oddKegs.pipe';
+
 
 import { FormsModule } from '@angular/forms';
 
@@ -21,7 +24,7 @@ import { MdSelectModule } from '@angular/material';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, NoopAnimationsModule, MdSelectModule],
-  declarations: [ AppComponent, AllKegsComponent, FilterKegsComponent],
+  declarations: [ AppComponent, AllKegsComponent, FilterKegsComponent,EvenKegsPipe, OddKegsPipe],
   bootstrap: [ AppComponent ]
 })
 

@@ -1,26 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+import {Keg} from './keg.model';
+
 
 @Component({
   selector: 'all-kegs',
   template: `
-    <div class="col m4" id="evenColumn">
-    //for loop, only print for Odd index
-    <h1> Tap Room </h1>
-    <md-select placeholder="State">
-      <md-option> Test 1</md-option>
-      <md-option> Test 1</md-option>
-    </md-select>
+    <div class="col m5" id="evenColumn">
+
+    <h1 *ngFor="let currentEvenKeg of childKegList | evenKegs"> {{currentEvenKeg.beerName}}  </h1>
     </div>
-    //for loop, only print for Even index
-    <div class="col m4" id="oddColumn">
-    <h1> Tap Room </h1>
-    <md-select placeholder="State">
-      <md-option> Test 1</md-option>
-      <md-option> Test 1</md-option>
-    </md-select>
+    <div class="col m5" id="oddColumn">
+    <h1 *ngFor="let currentOddKeg of childKegList | oddKegs"> {{currentOddKeg.beerName}}  </h1>
     </div>
 
   `
 })
 
-export class AllKegsComponent {}
+export class AllKegsComponent {
+  @Input() childKegList: Keg [];
+
+}
