@@ -5,10 +5,14 @@ import {Keg} from './keg.model';
   selector: 'app-root',
   template: `
   <div class="row">
+    <add-keg></add-keg>
+  </div>
+  <div class="row">
     <all-kegs [childKegList]="masterKegList|selectKegs:selectKegsFilterType:selectFilterValue"> </all-kegs>
 
 
     <filter-kegs [childKegList]="masterKegList" (filterSender)="filterSender($event)"></filter-kegs>
+
   </div>
   `
 })

@@ -10,13 +10,14 @@ import {Keg} from './keg.model';
 
 export class SelectKegsPipe implements PipeTransform {
   transform(input: Keg[], filter, value){
+   var valueHolder: string = value;
     if (filter === 'All'){
       return input;
     } else {
       var output: Keg []=[];
       for (var i=0; i<input.length; i++){
 
-        if (input[i][filter] === parseInt(value)){
+        if (input[i][filter] === valueHolder){
           output.push(input[i]);
         }
       }

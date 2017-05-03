@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 // import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MdSelectModule} from '@angular/material';
-
+import {AddKegComponent} from './addKeg.component';
 import { AppComponent } from './app.component';
 import {AllKegsComponent} from './allkegs.component';
 import {FilterKegsComponent} from './filter-kegs.component';
@@ -28,7 +28,7 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, BrowserAnimationsModule, MdSelectModule],
-  declarations: [ AppComponent, AllKegsComponent, FilterKegsComponent,EvenKegsPipe, OddKegsPipe, FilterUniquePipe, SelectKegsPipe],
+  declarations: [ AppComponent, AllKegsComponent, FilterKegsComponent,AddKegComponent, EvenKegsPipe, OddKegsPipe, FilterUniquePipe, SelectKegsPipe],
   bootstrap: [ AppComponent ]
 })
 

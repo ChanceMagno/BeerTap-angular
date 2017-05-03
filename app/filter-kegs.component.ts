@@ -11,8 +11,8 @@ import {Keg} from './keg.model';
     <md-option *ngFor = "let keg of childKegList|uniqueness:'price'" [value]="keg"> {{keg}}</md-option>
   </md-select>
   <h1> Pour Size</h1>
-  <md-select placeholder="State" [(ngModel)]="selectedOption" (change)="filterOnClicked(selectedOption)">
-    <md-option *ngFor = "let keg of childKegList|uniqueness:'happyHour'" [value]="keg"> {{keg}}</md-option>
+  <md-select placeholder="State" [(ngModel)]="selectedOption" (change)="filterOnClicked('pourSize', selectedOption)">
+    <md-option *ngFor = "let keg of childKegList|uniqueness:'pourSize'" [value]="keg"> {{keg}}</md-option>
   </md-select>
   </div>
   `
