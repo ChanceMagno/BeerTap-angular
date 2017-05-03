@@ -15,7 +15,6 @@ import {Keg} from './keg.model';
     <md-option *ngFor = "let keg of childKegList|uniqueness:'happyHour'" [value]="keg"> {{keg}}</md-option>
   </md-select>
   </div>
-
   `
 })
 
