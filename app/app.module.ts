@@ -1,11 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+// import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdSelectModule} from '@angular/material';
+
 import { AppComponent } from './app.component';
 import {AllKegsComponent} from './allkegs.component';
 import {FilterKegsComponent} from './filter-kegs.component';
 import { EvenKegsPipe } from './evenKegs.pipe';
 import { OddKegsPipe } from './oddKegs.pipe';
+import { FilterUniquePipe } from './filterUnique.pipe';
+
 
 
 import { FormsModule } from '@angular/forms';
@@ -20,11 +25,9 @@ import { FormsModule } from '@angular/forms';
 //   storageBucket: masterFirebaseConfig.storageBucket
 // }
 
-import { MdSelectModule } from '@angular/material';
-
 @NgModule({
-  imports: [ BrowserModule, FormsModule, NoopAnimationsModule, MdSelectModule],
-  declarations: [ AppComponent, AllKegsComponent, FilterKegsComponent,EvenKegsPipe, OddKegsPipe],
+  imports: [ BrowserModule, FormsModule, BrowserAnimationsModule, MdSelectModule],
+  declarations: [ AppComponent, AllKegsComponent, FilterKegsComponent,EvenKegsPipe, OddKegsPipe, FilterUniquePipe],
   bootstrap: [ AppComponent ]
 })
 
