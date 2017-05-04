@@ -56,6 +56,11 @@ gulp.task('fontBower', ['fontBowerClean'], function() {
     .pipe(gulp.dest('./build/fonts/roboto'));
 });
 
+gulp.task('slider',function() {
+  return gulp.src(['bower_components/materialize/extras/noUiSlider/*'])
+    .pipe(gulp.dest('./build/Slider'));
+});
+
 gulp.task('imagesBowerClean', function(){
   return del(['./build/images']);
 });
@@ -65,7 +70,7 @@ gulp.task('imagesBower', ['imagesBowerClean'], function() {
     .pipe(gulp.dest('./build/images'));
 });
 
-gulp.task('bower', ['jsBower', 'cssBower', 'fontBower', 'imagesBower']);
+gulp.task('bower', ['jsBower', 'cssBower', 'fontBower', 'imagesBower', 'slider']);
 
 ////////////////////// SASS //////////////////////
 
