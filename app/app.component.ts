@@ -4,21 +4,22 @@ import {Keg} from './keg.model';
 @Component({
   selector: 'app-root',
   template: `
-
+  <md-sidenav-container class="add-keg">
+  <md-sidenav #sidenav class="example-sidenav" mode="push">
+    <add-keg (newKegSender)="addNewKeg($event)"></add-keg>
+  </md-sidenav>
+  <button md-button (click)="sidenav.open()" id="addKegButton"> Add New Keg</button>
   <div class="row">
-  <div class="col s3">
-  <button md-button> Add New Keg</button>
-  <add-keg></add-keg>
 
-  </div>
-
-    <div class="col s7">
+    <div class="col s10">
     <all-kegs [childKegList]="masterKegList|selectKegs:selectKegsFilterType:selectFilterValue"> </all-kegs>
     </div>
     <div class="col s2">
     <filter-kegs [childKegList]="masterKegList" (filterSender)="filterSender($event)"></filter-kegs>
     </div>
   </div>
+  </md-sidenav-container>
+
   `
 })
 
@@ -43,6 +44,11 @@ export class AppComponent {
   filterSender (filterParams){
     this.selectFilterValue = filterParams[1];
     this.selectKegsFilterType = filterParams[0];
+  }
+
+  addNewKeg(newKeg){
+    this.masterKegList.push(newKeg);
+    console.log(this.masterKegList);
   }
 
 }

@@ -5,7 +5,7 @@ import {Keg} from './keg.model';
 @Component({
   selector: 'all-kegs',
   template: `
-<md-grid-list cols="2" rowHeight="4:3" gutterSize="0px">
+<md-grid-list cols="3" rowHeight="4:3" gutterSize="0px">
   <md-grid-tile class="beerCard" *ngFor="let currentEvenKeg of childKegList">
     <md-card>
   <md-card-title>	 {{currentEvenKeg.beerName}}  </md-card-title>

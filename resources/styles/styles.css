@@ -1,4 +1,11 @@
+body{
+min-height: 100%;
 
+}
+
+html {
+  min-height: 100%;
+}
 
 #rootContainer {
   background-image: url('../../build/images/wood-back.png');
@@ -9,11 +16,30 @@ md-card {
  border-radius: 20px !important;
  border-bottom-left-radius: 60px !important;
  background-color: #e0dbce !important;
+}
+
+#addKegButton{
+  background-color: red;
+}
+
+#addKegForm{
 
 }
 
-.mat-figure{
+.add-keg{
+  background-color: transparent;
+}
 
+.mat-sidenav.mat-sidenav-push{
+  background: transparent;
+}
+
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .pourSizeDisplay{
