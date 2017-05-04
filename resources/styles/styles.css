@@ -48,6 +48,10 @@ md-card.editKegForm.mat-card {
   background: transparent;
 }
 
+.collapsible-body {
+  background-color: white !important;
+}
+
 
 .example-sidenav-content {
   display: flex;

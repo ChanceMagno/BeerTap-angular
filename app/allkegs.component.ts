@@ -1,5 +1,6 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter} from '@angular/core';
 import {Keg} from './keg.model';
+
 
 
 @Component({
@@ -74,12 +75,13 @@ export class AllKegsComponent {
   @Output() updatedKegSender = new EventEmitter ();
   selectedKeg: Keg;
 
+
+
   updateNewKeg (index, beerName:string, brewery: string, beerStyle: string, price: string, alcoholContent: string, pourSize: string){
     var kegIndexToUpdate:number = parseInt(index);
     var updatedKeg = new Keg (beerName, brewery, parseInt(price), parseInt(pourSize), parseFloat(alcoholContent), 0, false, beerStyle);
     var updatedKegPackage = [kegIndexToUpdate, updatedKeg];
     this.updatedKegSender.emit(updatedKegPackage);
-
   }
 
 }

@@ -10,12 +10,11 @@ import {Keg} from './keg.model';
   </md-sidenav>
   <button md-button (click)="sidenav.open()" id="addKegButton"> Add New Keg</button>
   <div class="row">
-
     <div class="col s10">
-    <all-kegs [childKegList]="masterKegList|selectKegs:selectKegsFilterType:selectFilterValue" (updatedKegSender)="updateKeg($event)"> </all-kegs>
+      <all-kegs [childKegList]="masterKegList|selectKegs:selectKegsFilterType:selectFilterValue" (updatedKegSender)="updateKeg($event)"> </all-kegs>
     </div>
     <div class="col s2">
-    <filter-kegs [childKegList]="masterKegList" (filterSender)="filterSender($event)"></filter-kegs>
+      <filter-kegs [childKegList]="masterKegList" (filterSender)="filterSender($event)"></filter-kegs>
     </div>
   </div>
   </md-sidenav-container>
