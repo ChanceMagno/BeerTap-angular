@@ -12,7 +12,7 @@ import {Keg} from './keg.model';
   <div class="row">
 
     <div class="col s10">
-    <all-kegs [childKegList]="masterKegList|selectKegs:selectKegsFilterType:selectFilterValue"> </all-kegs>
+    <all-kegs [childKegList]="masterKegList|selectKegs:selectKegsFilterType:selectFilterValue" (updatedKegSender)="updateKeg($event)"> </all-kegs>
     </div>
     <div class="col s2">
     <filter-kegs [childKegList]="masterKegList" (filterSender)="filterSender($event)"></filter-kegs>
@@ -49,6 +49,10 @@ export class AppComponent {
   addNewKeg(newKeg){
     this.masterKegList.push(newKeg);
     console.log(this.masterKegList);
+  }
+
+  updateKeg (updatePackage) {
+    this.masterKegList[updatePackage[0]] = updatePackage[1];
   }
 
 }

@@ -58,7 +58,7 @@ export class AddKegComponent {
   }
 
   showAlcoholContent(value) {
-    this.selectedAlcoholContent= "ABV:" +value + "%";
+    this.selectedAlcoholContent= "ABV: " +value + "%";
   }
 
   showPourSize(pourSize) {
