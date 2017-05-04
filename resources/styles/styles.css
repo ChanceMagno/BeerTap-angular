@@ -63,3 +63,7 @@ md-card.editKegForm.mat-card {
 .pourSizeDisplay{
   font-size: 16px;
 }
+
+.fourDollars {
+  background-color: orange !important;
+}

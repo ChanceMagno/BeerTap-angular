@@ -10,12 +10,12 @@ declare var jQuery: any;
 <div class="row">
 
   <ul class="collapsible " data-collapsible="accordion">
+  <div class="collapsible-header filter">All Beers</div>
     <li *ngFor="let category of kegCategories; let i = index">
     <div class="collapsible-header">{{kegCategoryDisplayName[i]}}</div>
       <div class="collapsible-body">
       <button md-button class="filterButtons" *ngFor = "let keg of childKegList|uniqueness:category"  (click)="filterOnClicked(category, keg)"> {{keg}}
       </button>
-
       </div>
     </li>
   </ul>

@@ -8,7 +8,7 @@ import {Keg} from './keg.model';
   template: `
 <md-grid-list cols="3" rowHeight="4:3" gutterSize="0px">
   <md-grid-tile class="beerCard" *ngFor="let keg of childKegList;  let i = index">
-    <md-card *ngIf = "keg !== selectedKeg">
+    <md-card *ngIf = "keg !== selectedKeg" [class]="fourDollarBeer(keg)">
   <md-card-title>	 {{keg.beerName}}  </md-card-title>
     <md-card-subtitle> {{keg.brewery}}</md-card-subtitle>
     <h4> {{keg.price|currency:'USD':true:'1.2-2'}} <span class="pourSizeDisplay">{{keg.pourSize}} oz pour</span></h4>
@@ -76,6 +76,13 @@ export class AllKegsComponent {
   selectedKeg: Keg;
 
 
+fourDollarBeer(keg){
+  if(keg.price === 4){
+    return 'fourDollars';
+  } else {
+    return;
+  }
+}
 
   updateNewKeg (index, beerName:string, brewery: string, beerStyle: string, price: string, alcoholContent: string, pourSize: string){
     var kegIndexToUpdate:number = parseInt(index);
