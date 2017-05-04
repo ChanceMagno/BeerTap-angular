@@ -3,7 +3,7 @@
   "description": "",
   "main": "",
   "license": "MIT",
-  "homepage": "",
+  "homepage": "https://github.com/XiXiaPdx/tap-room",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -13,5 +13,8 @@
   ],
   "dependencies": {
     "materialize": "^0.98.2"
-  }
+  },
+  "authors": [
+    "Xi Xia <triplextension@gmail.com>"
+  ]
 }

@@ -11,6 +11,7 @@ import { EvenKegsPipe } from './evenKegs.pipe';
 import { OddKegsPipe } from './oddKegs.pipe';
 import { FilterUniquePipe } from './filterUnique.pipe';
 import {SelectKegsPipe} from './selectKegs.pipe';
+import { MaterialModule } from '@angular/material';
 
 
 
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
 // }
 
 @NgModule({
-  imports: [ BrowserModule, FormsModule, BrowserAnimationsModule, MdSelectModule],
+  imports: [ BrowserModule, FormsModule, BrowserAnimationsModule,MaterialModule.forRoot(),
+],
   declarations: [ AppComponent, AllKegsComponent, FilterKegsComponent,AddKegComponent, EvenKegsPipe, OddKegsPipe, FilterUniquePipe, SelectKegsPipe],
   bootstrap: [ AppComponent ]
 })

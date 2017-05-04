@@ -5,21 +5,18 @@ import {Keg} from './keg.model';
 @Component({
   selector: 'all-kegs',
   template: `
-    <div class="col m5" id="evenColumn">
-      <div class="row eachBeerRow" *ngFor="let currentEvenKeg of childKegList | evenKegs">
-        <h5> {{currentEvenKeg.beerName}}  </h5>
-        <p> {{currentEvenKeg.brewery}}</p>
-        <h4> {{currentEvenKeg.price}} <span class="pourSizeDisplay">{{currentEvenKeg.pourSize}} oz</span></h4>
-        <h6> ABV: {{currentEvenKeg.alcoholContent}}</h6>
-        <h6> Style: {{currentEvenKeg.style}}</h6>
-        <h6> Pints Left: {{currentEvenKeg.pintsLeft}}</h6>
-
-      </div>
-    </div>
-    <div class="col m5" id="oddColumn">
-    <h1 *ngFor="let currentOddKeg of childKegList | oddKegs"> {{currentOddKeg.beerName}}  </h1>
-    </div>
-
+<md-grid-list cols="2" gutterSize="0px">
+  <md-grid-tile class="beerCard" *ngFor="let currentEvenKeg of childKegList">
+    <md-card>
+    <h5> {{currentEvenKeg.beerName}}  </h5>
+    <p> {{currentEvenKeg.brewery}}</p>
+    <h4> {{currentEvenKeg.price}} <span class="pourSizeDisplay">{{currentEvenKeg.pourSize}} oz</span></h4>
+    <h6> ABV: {{currentEvenKeg.alcoholContent}}</h6>
+    <h6> Style: {{currentEvenKeg.style}}</h6>
+    <h6> Pints Left: {{currentEvenKeg.pintsLeft}}</h6>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>
   `
 })
 

@@ -8,11 +8,12 @@ import {Keg} from './keg.model';
     <add-keg></add-keg>
   </div>
   <div class="row">
+    <div class="col s10">
     <all-kegs [childKegList]="masterKegList|selectKegs:selectKegsFilterType:selectFilterValue"> </all-kegs>
-
-
+    </div>
+    <div class="col s2">
     <filter-kegs [childKegList]="masterKegList" (filterSender)="filterSender($event)"></filter-kegs>
-
+    </div>
   </div>
   `
 })
@@ -26,7 +27,13 @@ export class AppComponent {
   masterKegList: Keg[] = [
     new Keg ('Sticky Hands Imperial IPA', 'Block 15 - Willamette Valley', 6, 12, 8.1, 2, false, 'IPA'),
     new Keg ('IPL', 'Ex Novo - Portland Metro', 4, 16, 5.4, 3, false, 'Lager'),
-    new Keg ('The Tempest Saison', 'Fort George - Oregon Coast', 6, 12, 8.2, 1, false, 'Saison')
+    new Keg ('The Tempest Saison', 'Fort George - Oregon Coast', 6, 12, 8.2, 1, false, 'Saison'),
+    new Keg ('Sticky Hands Imperial IPA', 'Block 15 - Willamette Valley', 6, 12, 8.1, 2, false, 'IPA'),
+    new Keg ('IPL', 'Ex Novo - Portland Metro', 4, 16, 5.4, 3, false, 'Lager'),
+    new Keg ('The Tempest Saison', 'Fort George - Oregon Coast', 6, 12, 8.2, 1, false, 'Saison'),
+    new Keg ('Sticky Hands Imperial IPA', 'Block 15 - Willamette Valley', 6, 12, 8.1, 2, false, 'IPA'),
+    new Keg ('IPL', 'Ex Novo - Portland Metro', 4, 16, 5.4, 3, false, 'Lager'),
+    new Keg ('The Tempest Saison', 'Fort George - Oregon Coast', 6, 12, 8.2, 1, false, 'Saison'),
   ];
 
   filterSender (filterParams){
