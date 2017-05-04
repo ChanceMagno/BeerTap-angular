@@ -26,6 +26,20 @@ md-card {
 
 }
 
+md-card.editKegForm.mat-card {
+  padding:0px;
+  padding-top: 10px;
+}
+
+.editKegForm .input-field {
+  margin:0px;
+}
+
+.editKegForm .range-field {
+  margin:0px;
+  margin-top: 25px;
+}
+
 .add-keg{
   background-color: transparent;
 }
