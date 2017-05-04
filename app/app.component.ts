@@ -4,14 +4,18 @@ import {Keg} from './keg.model';
 @Component({
   selector: 'app-root',
   template: `
+
   <div class="row">
-    <add-keg></add-keg>
+  <div class="col s3">
+  <button md-button> Add New Keg</button>
+  <add-keg></add-keg>
+
   </div>
-  <div class="row">
-    <div class="col s7 offset-s2">
+
+    <div class="col s7">
     <all-kegs [childKegList]="masterKegList|selectKegs:selectKegsFilterType:selectFilterValue"> </all-kegs>
     </div>
-    <div class="col s3">
+    <div class="col s2">
     <filter-kegs [childKegList]="masterKegList" (filterSender)="filterSender($event)"></filter-kegs>
     </div>
   </div>
