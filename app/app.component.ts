@@ -8,10 +8,10 @@ import {Keg} from './keg.model';
     <add-keg></add-keg>
   </div>
   <div class="row">
-    <div class="col s10">
+    <div class="col s7 offset-s2">
     <all-kegs [childKegList]="masterKegList|selectKegs:selectKegsFilterType:selectFilterValue"> </all-kegs>
     </div>
-    <div class="col s2">
+    <div class="col s3">
     <filter-kegs [childKegList]="masterKegList" (filterSender)="filterSender($event)"></filter-kegs>
     </div>
   </div>

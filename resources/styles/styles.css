@@ -1,15 +1,19 @@
 
-#evenColumn{
-  border-style: solid;
-  border-left:0px;
-  border-top: 0px;
-  border-bottom: 0px;
-  border-color: grey;
-  padding-right: 20px;
+
+#rootContainer {
+  background-image: url('../../build/images/wood-back.png');
 }
 
-.beerCard{
-  justify-content: inherit !important;
+md-card {
+ width:90%;
+ border-radius: 20px !important;
+ border-bottom-left-radius: 60px !important;
+ background-color: #e0dbce !important;
+
+}
+
+.mat-figure{
+
 }
 
 .pourSizeDisplay{

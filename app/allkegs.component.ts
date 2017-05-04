@@ -5,14 +5,14 @@ import {Keg} from './keg.model';
 @Component({
   selector: 'all-kegs',
   template: `
-<md-grid-list cols="2" gutterSize="0px">
+<md-grid-list cols="2" rowHeight="4:3" gutterSize="0px">
   <md-grid-tile class="beerCard" *ngFor="let currentEvenKeg of childKegList">
     <md-card>
-    <h5> {{currentEvenKeg.beerName}}  </h5>
-    <p> {{currentEvenKeg.brewery}}</p>
-    <h4> {{currentEvenKeg.price}} <span class="pourSizeDisplay">{{currentEvenKeg.pourSize}} oz</span></h4>
-    <h6> ABV: {{currentEvenKeg.alcoholContent}}</h6>
-    <h6> Style: {{currentEvenKeg.style}}</h6>
+  <md-card-title>	 {{currentEvenKeg.beerName}}  </md-card-title>
+    <md-card-subtitle> {{currentEvenKeg.brewery}}</md-card-subtitle>
+    <h4> {{currentEvenKeg.price|currency:'USD':true:'1.0-2'}} <span class="pourSizeDisplay">{{currentEvenKeg.pourSize}} oz pour</span></h4>
+    <div class="chip"> ABV: {{currentEvenKeg.alcoholContent}}%</div>
+    <div class="chip"> Style: {{currentEvenKeg.style}}</div>
     <h6> Pints Left: {{currentEvenKeg.pintsLeft}}</h6>
     </md-card>
   </md-grid-tile>

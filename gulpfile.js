@@ -56,7 +56,16 @@ gulp.task('fontBower', ['fontBowerClean'], function() {
     .pipe(gulp.dest('./build/fonts/roboto'));
 });
 
-gulp.task('bower', ['jsBower', 'cssBower', 'fontBower']);
+gulp.task('imagesBowerClean', function(){
+  return del(['./build/images']);
+});
+
+gulp.task('imagesBower', ['imagesBowerClean'], function() {
+  return gulp.src(['resources/images/*'])
+    .pipe(gulp.dest('./build/images'));
+});
+
+gulp.task('bower', ['jsBower', 'cssBower', 'fontBower', 'imagesBower']);
 
 ////////////////////// SASS //////////////////////
 
